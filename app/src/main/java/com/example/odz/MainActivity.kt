@@ -64,18 +64,19 @@ class MainActivity : AppCompatActivity() {
             val booksFiltered = catalog.textbooks.filter { it.grade == grade }
             
             if (bookIndex < 0 || bookIndex >= booksFiltered.size) {
-                tvResult.text = "Выберите учебник."
+                tvResult.text = "Выберите сборник/эпоху."
                 return@setOnClickListener
             }
             
             val book = booksFiltered[bookIndex]
             val pid = editProblem.text.toString().trim()
-            val found = book.problems.find { it.id == pid }
+            
+            val found = book.problems.find { it.id.contains(pid, ignoreCase = true) }
             
             if (found != null) {
-                tvResult.text = "Задача: ${found.id}\n\nУсловие: ${found.statement ?: "—"}\n\nОтвет: ${found.answer}\n\nРешение:\n${found.steps}"
+                tvResult.text = "🎵 Произведение: ${found.id}\n\n👤 Композитор: ${found.statement ?: "—"}\n\n🎹 Тональность/Жанр: ${found.answer}\n\n📖 История:\n${found.steps}"
             } else {
-                tvResult.text = "Задача \"$pid\" не найдена в этом учебнике."
+                tvResult.text = "Произведение \"$pid\" не найдено."
             }
         }
 

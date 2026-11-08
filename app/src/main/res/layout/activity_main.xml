@@ -1,68 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="#121212"
-    android:padding="16dp"
+    android:background="#0A0A0A"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎸 Guitar Chords"
+        android:textColor="#FFB800"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="🎼 Классическая Музыка"
-        android:textColor="#D4AF37"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:text="Выберите песню и играйте"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"/>
 
+    <!-- Выбор жанра (как вкладки на 2 скрине) -->
     <Spinner
         android:id="@+id/spinnerGrade" 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="#D4AF37"
-        android:layout_marginBottom="8dp" />
+        android:layout_height="55dp"
+        android:backgroundTint="#1E1E1E"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Выбор исполнителя/сборника -->
     <Spinner
         android:id="@+id/spinnerBook"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="#D4AF37"
+        android:layout_height="55dp"
+        android:backgroundTint="#1E1E1E"
         android:layout_marginBottom="16dp" />
 
+    <!-- Поле поиска -->
     <EditText
         android:id="@+id/editProblemId"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Название (напр. Лунная соната)"
-        android:textColorHint="#888888"
+        android:layout_height="55dp"
+        android:hint="Поиск песни (напр. Knockin')"
+        android:textColorHint="#666666"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#D4AF37"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:backgroundTint="#FFB800"
         android:inputType="text"
         android:layout_marginBottom="16dp" />
 
+    <!-- Кнопка (золотая) -->
     <Button
         android:id="@+id/btnShow"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Узнать о произведении"
+        android:text="Показать аккорды"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:backgroundTint="#D4AF37"
+        android:backgroundTint="#FFB800"
         android:textColor="#000000"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="24dp" />
 
+    <!-- Экран вывода (как на 3 скрине) -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="#121212"
+        android:padding="16dp"
+        android:scrollbars="none">
 
         <TextView
             android:id="@+id/tvResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:lineSpacingExtra="6dp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="8dp"
             android:textColor="#E0E0E0"
-            android:text="Выберите эпоху и введите название произведения." />
+            android:text="Здесь появятся текст, аккорды и табы." />
     </ScrollView>
 </LinearLayout>

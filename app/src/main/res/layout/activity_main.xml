@@ -1,88 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#0A0A0A"
-    android:padding="20dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#050505">
 
-    <!-- Заголовок -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🎸 Guitar Chords"
-        android:textColor="#FFB800"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Выберите песню и играйте"
-        android:textColor="#888888"
-        android:textSize="14sp"
-        android:layout_marginBottom="24dp"/>
-
-    <!-- Выбор жанра (как вкладки на 2 скрине) -->
-    <Spinner
-        android:id="@+id/spinnerGrade" 
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:backgroundTint="#1E1E1E"
-        android:layout_marginBottom="12dp" />
-
-    <!-- Выбор исполнителя/сборника -->
-    <Spinner
-        android:id="@+id/spinnerBook"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:backgroundTint="#1E1E1E"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Поле поиска -->
-    <EditText
-        android:id="@+id/editProblemId"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Поиск песни (напр. Knockin')"
-        android:textColorHint="#666666"
-        android:textColor="#FFFFFF"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:backgroundTint="#FFB800"
-        android:inputType="text"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Кнопка (золотая) -->
-    <Button
-        android:id="@+id/btnShow"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:text="Показать аккорды"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:backgroundTint="#FFB800"
-        android:textColor="#000000"
-        android:layout_marginBottom="24dp" />
-
-    <!-- Экран вывода (как на 3 скрине) -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#121212"
-        android:padding="16dp"
-        android:scrollbars="none">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav">
 
-        <TextView
-            android:id="@+id/tvResult"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:fontFamily="monospace"
-            android:lineSpacingExtra="8dp"
-            android:textColor="#E0E0E0"
-            android:text="Здесь появятся текст, аккорды и табы." />
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Верхняя панель -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚙️" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Инструменты" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" android:layout_centerInParent="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👑" android:textSize="24sp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <!-- Большая карточка Гитары (Именно её ищет MainActivity) -->
+            <LinearLayout
+                android:id="@+id/btnGuitar"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#0A0A0A"
+                android:layout_marginBottom="24dp">
+                
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎸" android:textSize="130sp" android:shadowColor="#FFB800" android:shadowRadius="30"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Гитара" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Перейти →" android:textColor="#FFB800" android:textSize="16sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Другие инструменты" android:textColor="#AAAAAA" android:textSize="14sp" android:layout_marginBottom="16dp"/>
+
+            <!-- Сетка 3x3 -->
+            <GridLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:columnCount="3"
+                android:rowCount="3">
+                
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎹"/><TextView style="@style/InstrumentName" android:text="Фортепиано"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪕"/><TextView style="@style/InstrumentName" android:text="Укулеле"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎸"/><TextView style="@style/InstrumentName" android:text="Бас-гитара"/></LinearLayout>
+                
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎻"/><TextView style="@style/InstrumentName" android:text="Скрипка"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🥁"/><TextView style="@style/InstrumentName" android:text="Барабаны"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪈"/><TextView style="@style/InstrumentName" android:text="Флейта"/></LinearLayout>
+                
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎷"/><TextView style="@style/InstrumentName" android:text="Саксофон"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪕"/><TextView style="@style/InstrumentName" android:text="Банджо"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎻"/><TextView style="@style/InstrumentName" android:text="Мандолина"/></LinearLayout>
+            </GridLayout>
+        </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+    <!-- Нижнее меню -->
+    <LinearLayout android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="60dp" android:layout_alignParentBottom="true" android:background="#0A0A0A" android:orientation="horizontal">
+        <TextView style="@style/NavItem" android:text="🎸&#10;Инструменты" android:textColor="#FFB800"/>
+        <TextView style="@style/NavItem" android:text="⭐&#10;Избранное" android:textColor="#666666"/>
+        <TextView style="@style/NavItem" android:text="🔍&#10;Поиск" android:textColor="#666666"/>
+    </LinearLayout>
+</RelativeLayout>

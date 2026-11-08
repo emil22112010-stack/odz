@@ -1,40 +1,39 @@
 {
   "textbooks": [
     {
-      "grade": "Классицизм",
-      "title": "Сонаты",
+      "grade": "Зарубежный рок",
+      "title": "Классика",
       "author": "Разное",
       "problems": [
         {
-          "id": "Лунная соната",
-          "statement": "Людвиг ван Бетховен",
-          "answer": "До-диез минор (C# minor)",
-          "steps": "Соната №14. Написана в 1801 году. Посвящена ученице Бетховена — графине Джульетте Гвиччарди."
+          "id": "Knockin' on Heaven's Door",
+          "statement": "Bob Dylan",
+          "answer": "G | D | Am | C",
+          "steps": "G              D           Am         G\nMama, take this badge off of me\nG          D           C          G\nI can't use it anymore\nG              D           Am         G\nIt's gettin' dark, too dark to see\nG          D           C          G\nI feel like I'm knockin' on heaven's door\n\nПрипев:\nG          D           Am         G\nKnock, knock, knockin' on heaven's door"
         },
         {
-          "id": "Симфония 40",
-          "statement": "Вольфганг Амадей Моцарт",
-          "answer": "Соль минор (G minor)",
-          "steps": "Одна из самых известных симфоний. Написана в 1788 году."
-        }
-      ]
-    },
-    {
-      "grade": "Барокко",
-      "title": "Орган и струнные",
-      "author": "Разное",
-      "problems": [
-        {
-          "id": "Токката и фуга ре минор",
-          "statement": "Иоганн Себастьян Бах",
-          "answer": "Ре минор (D minor)",
-          "steps": "Знаменитое произведение для органа. Токката — это виртуозная пьеса, а фуга — полифония."
+          "id": "Hotel California",
+          "statement": "Eagles",
+          "answer": "Bm | F# | A | E | G | D | Em | F#",
+          "steps": "Bm                     F#\nOn a dark desert highway, cool wind in my hair\nA                     E\nWarm smell of colitas, rising up through the air\nG                     D\nUp ahead in the distance, I saw a shimmering light\nEm                                    F#\nMy head grew heavy and my sight grew dim, I had to stop for the night\n\n(Бой: перебор или медленный бой)"
         },
         {
-          "id": "Времена года. Зима",
-          "statement": "Антонио Вивальди",
-          "answer": "Фа минор (F minor)",
-          "steps": "Один из четырёх скрипичных концертов цикла 'Времена года'."
+          "id": "Let It Be",
+          "statement": "The Beatles",
+          "answer": "C | G | Am | F",
+          "steps": "C                 G\nWhen I find myself in times of trouble\nAm            F\nMother Mary comes to me\nC                 G             F  C\nSpeaking words of wisdom, let it be\n\nC                 G\nAnd in my hour of darkness\nAm            F\nShe is standing right in front of me\nC                 G             F  C\nSpeaking words of wisdom, let it be\n\nПрипев:\nAm         G       F          C\nLet it be, let it be, let it be, let it be"
+        },
+        {
+          "id": "Hallelujah",
+          "statement": "Leonard Cohen",
+          "answer": "C | Am | C | Am | F | G | C | G",
+          "steps": "C                     Am\nNow I've heard there was a secret chord\nC                         Am\nThat David played, and it pleased the Lord\nF                G           C       G\nBut you don't really care for music, do ya?\nC                   F           G\nIt goes like this, the fourth, the fifth\nAm              F\nThe minor fall, the major lift\nG               E           Am\nThe baffled king composing Hallelujah\n\nПрипев:\nF           Am\nHallelujah, Hallelujah\nF           C  G  C\nHallelujah, Hallelu-u-u-jah"
+        },
+        {
+          "id": "Wonderwall",
+          "statement": "Oasis",
+          "answer": "Em7 | G | Dsus4 | A7sus4",
+          "steps": "Em7                 G\nToday is gonna be the day\nDsus4               A7sus4\nThat they're gonna throw it back to you\nEm7                   G\nBy now you've somehow\nDsus4           A7sus4\nRealized what you gotta do\n\n(Капо 2 лад. Бой: вниз-вниз-вверх-вверх-вниз)"
         }
       ]
     }

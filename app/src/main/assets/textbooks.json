@@ -1,7 +1,7 @@
 {
   "textbooks": [
     {
-      "grade": "Зарубежный рок",
+      "grade": "Гитара",
       "title": "Классика",
       "author": "Разное",
       "problems": [
@@ -15,25 +15,19 @@
           "id": "Hotel California",
           "statement": "Eagles",
           "answer": "Bm | F# | A | E | G | D | Em | F#",
-          "steps": "Bm                     F#\nOn a dark desert highway, cool wind in my hair\nA                     E\nWarm smell of colitas, rising up through the air\nG                     D\nUp ahead in the distance, I saw a shimmering light\nEm                                    F#\nMy head grew heavy and my sight grew dim, I had to stop for the night\n\n(Бой: перебор или медленный бой)"
-        },
-        {
-          "id": "Let It Be",
-          "statement": "The Beatles",
-          "answer": "C | G | Am | F",
-          "steps": "C                 G\nWhen I find myself in times of trouble\nAm            F\nMother Mary comes to me\nC                 G             F  C\nSpeaking words of wisdom, let it be\n\nC                 G\nAnd in my hour of darkness\nAm            F\nShe is standing right in front of me\nC                 G             F  C\nSpeaking words of wisdom, let it be\n\nПрипев:\nAm         G       F          C\nLet it be, let it be, let it be, let it be"
-        },
-        {
-          "id": "Hallelujah",
-          "statement": "Leonard Cohen",
-          "answer": "C | Am | C | Am | F | G | C | G",
-          "steps": "C                     Am\nNow I've heard there was a secret chord\nC                         Am\nThat David played, and it pleased the Lord\nF                G           C       G\nBut you don't really care for music, do ya?\nC                   F           G\nIt goes like this, the fourth, the fifth\nAm              F\nThe minor fall, the major lift\nG               E           Am\nThe baffled king composing Hallelujah\n\nПрипев:\nF           Am\nHallelujah, Hallelujah\nF           C  G  C\nHallelujah, Hallelu-u-u-jah"
+          "steps": "Bm                     F#\nOn a dark desert highway, cool wind in my hair\nA                     E\nWarm smell of colitas, rising up through the air\nG                     D\nUp ahead in the distance, I saw a shimmering light\nEm                                    F#\nMy head grew heavy and my sight grew dim, I had to stop for the night"
         },
         {
           "id": "Wonderwall",
           "statement": "Oasis",
           "answer": "Em7 | G | Dsus4 | A7sus4",
-          "steps": "Em7                 G\nToday is gonna be the day\nDsus4               A7sus4\nThat they're gonna throw it back to you\nEm7                   G\nBy now you've somehow\nDsus4           A7sus4\nRealized what you gotta do\n\n(Капо 2 лад. Бой: вниз-вниз-вверх-вверх-вниз)"
+          "steps": "Em7                 G\nToday is gonna be the day\nDsus4               A7sus4\nThat they're gonna throw it back to you\nEm7                   G\nBy now you've somehow\nDsus4           A7sus4\nRealized what you gotta do\n\n(Капо 2 лад)"
+        },
+        {
+          "id": "Let It Be",
+          "statement": "The Beatles",
+          "answer": "C | G | Am | F",
+          "steps": "C                 G\nWhen I find myself in times of trouble\nAm            F\nMother Mary comes to me\nC                 G             F  C\nSpeaking words of wisdom, let it be"
         }
       ]
     }

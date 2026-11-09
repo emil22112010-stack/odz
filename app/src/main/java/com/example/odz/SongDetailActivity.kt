@@ -1,5 +1,6 @@
 package com.example.odz
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -21,8 +22,16 @@ class SongDetailActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvDetailTitle).text = title
         findViewById<TextView>(R.id.tvDetailArtist).text = artist
         findViewById<TextView>(R.id.tvChordsText).text = text
-        
-        // Меняем заголовок в самом верху
         findViewById<TextView>(R.id.tvHeaderTitle).text = title
+
+        // ЛОГИКА КНОПКИ "ПОДЕЛИТЬСЯ"
+        findViewById<TextView>(R.id.btnShare).setOnClickListener {
+            val shareIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "$title - $artist\n\n$text")
+                type = "text/plain"
+            }
+            startActivity(Intent.createChooser(shareIntent, "Поделиться аккордами"))
+        }
     }
 }

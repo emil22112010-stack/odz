@@ -25,7 +25,7 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👑" android:textSize="24sp" android:layout_alignParentEnd="true"/>
             </RelativeLayout>
 
-            <!-- Большая карточка Гитары (Именно её ищет MainActivity) -->
+            <!-- Большая карточка Гитары -->
             <LinearLayout
                 android:id="@+id/btnGuitar"
                 android:layout_width="match_parent"
@@ -35,14 +35,20 @@
                 android:background="#0A0A0A"
                 android:layout_marginBottom="24dp">
                 
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎸" android:textSize="130sp" android:shadowColor="#FFB800" android:shadowRadius="30"/>
+                <!-- ВОТ ЗДЕСЬ МЫ ЗАМЕНИЛИ ЭМОДЗИ НА КАРТИНКУ -->
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_guitar"
+                    android:layout_marginBottom="10dp"/>
+                    
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Гитара" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Перейти →" android:textColor="#FFB800" android:textSize="16sp" android:layout_marginTop="4dp"/>
             </LinearLayout>
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Другие инструменты" android:textColor="#AAAAAA" android:textSize="14sp" android:layout_marginBottom="16dp"/>
 
-            <!-- Сетка 3x3 -->
+            <!-- Сетка 3x3 (пока с эмодзи, если понравится большая иконка — заменим и их) -->
             <GridLayout 
                 android:layout_width="match_parent" 
                 android:layout_height="wrap_content" 
@@ -57,7 +63,7 @@
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🥁"/><TextView style="@style/InstrumentName" android:text="Барабаны"/></LinearLayout>
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪈"/><TextView style="@style/InstrumentName" android:text="Флейта"/></LinearLayout>
                 
-                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎷"/><TextView style="@style/InstrumentName" android:text="Саксофон"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎷"/><TextView @style/InstrumentName" android:text="Саксофон"/></LinearLayout>
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪕"/><TextView style="@style/InstrumentName" android:text="Банджо"/></LinearLayout>
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎻"/><TextView style="@style/InstrumentName" android:text="Мандолина"/></LinearLayout>
             </GridLayout>

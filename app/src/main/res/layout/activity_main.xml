@@ -35,7 +35,7 @@
                 android:background="#0A0A0A"
                 android:layout_marginBottom="24dp">
                 
-                <!-- ВОТ ЗДЕСЬ МЫ ЗАМЕНИЛИ ЭМОДЗИ НА КАРТИНКУ -->
+                <!-- Наша новая векторная иконка -->
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -48,7 +48,7 @@
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Другие инструменты" android:textColor="#AAAAAA" android:textSize="14sp" android:layout_marginBottom="16dp"/>
 
-            <!-- Сетка 3x3 (пока с эмодзи, если понравится большая иконка — заменим и их) -->
+            <!-- Сетка 3x3 -->
             <GridLayout 
                 android:layout_width="match_parent" 
                 android:layout_height="wrap_content" 
@@ -63,7 +63,7 @@
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🥁"/><TextView style="@style/InstrumentName" android:text="Барабаны"/></LinearLayout>
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪈"/><TextView style="@style/InstrumentName" android:text="Флейта"/></LinearLayout>
                 
-                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎷"/><TextView @style/InstrumentName" android:text="Саксофон"/></LinearLayout>
+                <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎷"/><TextView style="@style/InstrumentName" android:text="Саксофон"/></LinearLayout>
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🪕"/><TextView style="@style/InstrumentName" android:text="Банджо"/></LinearLayout>
                 <LinearLayout style="@style/InstrumentCard"><TextView style="@style/InstrumentIcon" android:text="🎻"/><TextView style="@style/InstrumentName" android:text="Мандолина"/></LinearLayout>
             </GridLayout>

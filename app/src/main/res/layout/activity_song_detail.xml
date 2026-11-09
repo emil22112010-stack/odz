@@ -26,9 +26,13 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- НИЖНЕЕ МЕНЮ (Тут мы заменили "Темп" на "Поделиться") -->
     <LinearLayout android:id="@+id/bottomAction" android:layout_width="match_parent" android:layout_height="60dp" android:layout_alignParentBottom="true" android:background="#0A0A0A" android:orientation="horizontal">
         <TextView style="@style/NavItem" android:text="🎛️&#10;Транспонировать" android:textColor="#666666"/>
-        <TextView style="@style/NavItem" android:text="120&#10;Темп" android:textColor="#FFFFFF" android:textStyle="bold"/>
+        
+        <!-- ВОТ НАША НОВАЯ КНОПКА -->
+        <TextView android:id="@+id/btnShare" style="@style/NavItem" android:text="📤&#10;Поделиться" android:textColor="#FFB800" android:textStyle="bold"/>
+        
         <TextView style="@style/NavItem" android:text="🤍&#10;В избранное" android:textColor="#666666"/>
     </LinearLayout>
 </RelativeLayout>
